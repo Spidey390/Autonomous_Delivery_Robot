@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_BASE = 'http://localhost:5000/api';
+// Use Render backend URL in production, or fallback to localhost for local testing
+const API_BASE = import.meta.env.VITE_API_URL || 'https://autonomous-delivery.onrender.com/api';
 
 const api = axios.create({
   baseURL: API_BASE,
