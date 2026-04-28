@@ -196,7 +196,7 @@ app.delete('/api/users/:id', authMiddleware, async (req, res) => {
 app.get('/api/robot/state', authMiddleware, async (req, res) => {
   try {
     let state = await RobotState.findOne();
-    if (!state) state = await RobotState.create({ lat: 12.9716, lng: 77.5946, battery: 100, status: 'Stopped', wifi: 100, obstacle: false });
+    if (!state) state = await RobotState.create({ lat: 9.146445, lng: 77.831472, battery: 100, status: 'Stopped', wifi: 100, obstacle: false });
     res.json(state);
   } catch (err) {
     logger.error('Get robot state error:', err);
